@@ -35,7 +35,7 @@ class Slack_Class {
 	}
 
 	sendMessageToGroup(msg, group, params = {}) {
-		this.bot.postMessageToUser(group, msg, params);
+		this.bot.postMessageToGroup(group, msg, params);
 	}
 
 	setEvents(){

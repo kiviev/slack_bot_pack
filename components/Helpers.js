@@ -13,6 +13,16 @@ class Helpers{
 	static testRegex(regex,string){
 		return regex.test(string);
 	}
+
+  static getAbonoResultToNotificate(data){
+    var str = '';
+    for (var p in data) {
+      if (data.hasOwnProperty(p)) {
+        str += '- ' + p + ' -> ' + data[p] + '\n';
+      }
+    }
+    return str;
+  }
 }
 
 module.exports = Helpers;

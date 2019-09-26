@@ -8,6 +8,7 @@ class BaseMessage {
 		this.bot = bot;
 		this.setProperties(data);
 		// this.setActions()
+    console.log('Mesage Type: ' , this.name);
 	}
 
 	setProperties(data){
@@ -32,6 +33,7 @@ class BaseMessage {
 	}
 
 	onText(regex,cb){
+    if(!this.text) return;
 		if(this.text && Helpers.testRegex(regex,this.text)){
 			if(typeof cb == 'function'){
 				cb(arguments[2]);
@@ -48,11 +50,18 @@ class BaseMessage {
 
 
 	// subtype actions
-	message_deleted() {
-		console.log(this);
-		
-		console.log('message Deleted: ' , this);
-	}
+  message_deleted() {
+    // console.log(this);
+
+    console.log('message Deleted: ');
+  }
+
+
+  bot_message() {
+    // console.log(this);
+
+    console.log('Subtype: bot_message : ');
+  }
 
 
 

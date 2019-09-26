@@ -10,6 +10,7 @@
   "author": "Paco Alba <kiviev@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "abono-transportes-web-scraping": "^1.0.11",
     "axios": "^0.19.0",
     "dotenv": "^8.1.0",
     "nodemon": "^1.19.2",
